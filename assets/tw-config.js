@@ -6,7 +6,8 @@ tailwind.config = {
         sand: '#EDE4D3',
         sage: { 50: '#F1F6F3', 100: '#DDEAE3', 200: '#BCD5C8', 500: '#5E8C78', 600: '#4A7360', 700: '#3B5D4D', 900: '#22372D' },
         saffron: { 100: '#FCEBCB', 400: '#EDAE4A', 500: '#E19A2B', 600: '#C8821A' },
-        ink: '#2B3A33'
+        ink: '#2B3A33',
+        terra: { DEFAULT: '#B85C2E', dark: '#9C4A22' }
       },
       fontFamily: {
         display: ['"Playfair Display"', 'serif'],

@@ -6,12 +6,13 @@
   <title>Shri Kashi Kuber Travel Agency | Varanasi Tours, Cars, Scooters &amp; Services</title>
   <meta name="description" content="Shri Kashi Kuber Travel Agency, Varanasi – tour packages, car and scooter rental, boat rides, railway station pick-up, pre-wedding shoots and hotel booking. Book on WhatsApp.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="assets/tw-config.js"></script>
-  <link rel="stylesheet" href="assets/dev-diwali-popup.css">
+  <link rel="stylesheet" href="assets/home.css">
+  <!-- <link rel="stylesheet" href="assets/dev-diwali-popup.css"> -->
   <script src="assets/app.js" defer></script>
-  <script src="assets/dev-diwali-popup.js" defer></script>
+  <!-- <script src="assets/dev-diwali-popup.js" defer></script> -->
   <style>
     html { scroll-behavior: auto; }
     .page-in { animation: pageIn .3s ease both; }
@@ -26,27 +27,37 @@
 
   <!-- Page content (shown inside <main> by the router in assets/app.js) -->
   <template id="tpl-home"><!-- Hero -->
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-sage-100 via-cream to-saffron-100"></div>
-    <div class="relative max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <span class="inline-block bg-white/80 text-sage-700 text-xs font-semibold px-4 py-1.5 rounded-full border border-sand">🙏 Namaste · Welcome to Kashi</span>
-        <h1 class="font-display text-4xl md:text-6xl text-sage-900 mt-5 leading-tight">Explore Varanasi the <span class="text-saffron-600">easy &amp; beautiful</span> way</h1>
-        <p class="mt-5 text-ink/70 max-w-md">Tour packages, cars, scooters, boat rides and more. Clear fixed prices, and booking is just one WhatsApp message away.</p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="#/packages" class="bg-sage-600 hover:bg-sage-700 text-white font-semibold px-6 py-3 rounded-full shadow-soft transition">View Packages</a>
-          <a data-wa="Namaste Shri kashi Kuber Travel Agency! I want to plan a trip to Varanasi. Please help me." class="bg-[#25D366] hover:brightness-95 text-white font-semibold px-6 py-3 rounded-full shadow-soft transition cursor-pointer">Book on WhatsApp</a>
-        </div>
+  <section class="kk-hero">
+    <img src="assets/varanasi-ghats.jpg" alt="Varanasi ghats along the Ganga at sunset" class="kk-hero__img" fetchpriority="high">
+    <img src="assets/img/hero.jpg" alt="" aria-hidden="true" onerror="imgFallback(this)" class="kk-hero__img">
+    <div class="kk-hero__shade"></div>
+
+    <div class="kk-hero__inner">
+      <p class="kk-eyebrow"><span></span>Your Varanasi, beautifully planned</p>
+      <h1 class="kk-h1">Come for the <em>darshan.</em> Stay for the feeling.</h1>
+      <p class="kk-lead">Discover Kashi with people who call it home. From your first boat ride to your last chai, we'll make every moment feel effortless.</p>
+      <div class="kk-actions">
+        <a data-wa="Namaste Shri Kashi Kuber Travel Agency! I want to plan a trip to Varanasi. Please help me." class="kk-btn kk-btn--primary cursor-pointer">Plan your trip <span aria-hidden="true">↗</span></a>
+        <a href="#/packages" class="kk-link">Explore our experiences <span aria-hidden="true">↓</span></a>
       </div>
-      <div class="relative h-72 md:h-96 rounded-[2rem] overflow-hidden shadow-soft bg-gradient-to-br from-sage-200 to-saffron-100 grid place-items-center text-8xl">
-        <img src="assets/varanasi-ghats.jpg" alt="Varanasi ghats along the Ganga" class="absolute inset-0 w-full h-full object-cover">
-        <img src="assets/img/hero.jpg" alt="Varanasi ghats along the Ganga" onerror="imgFallback(this)" class="absolute inset-0 w-full h-full object-cover">
-      </div>
+    </div>
+
+    <div class="kk-hero__badge"><span class="kk-ring">✳</span><p>From Kashi, with<br>local love.</p></div>
+    <div class="kk-hero__foot"><span>25°19′ N · 83°00′ E</span><span>Varanasi, Uttar Pradesh</span></div>
+  </section>
+
+  <!-- Trust strip -->
+  <section class="kk-trust">
+    <div class="kk-trust__inner">
+      <div><span class="kk-ring">✳</span>Local experts, always</div>
+      <div><span class="kk-ring">✓</span>Verified drivers</div>
+      <div><span class="kk-ring">₹</span>Clear prices upfront</div>
+      <div><span class="kk-ring">↗</span>Easy WhatsApp booking</div>
     </div>
   </section>
 
   <!-- Quick categories -->
-  <section class="max-w-6xl mx-auto px-4 -mt-6 relative">
+  <section class="max-w-6xl mx-auto px-4 mt-12 relative">
     <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
       <a href="#/packages" class="bg-white rounded-2xl border border-sand shadow-soft p-4 text-center hover:-translate-y-1 transition"><div class="text-3xl"><img src="assets/icons/packages.svg" alt="Packages" class="w-full h-full object-cover"></div><p class="mt-1 text-sm font-semibold text-sage-900">Packages</p></a>
       <a href="#/rent-car" class="bg-white rounded-2xl border border-sand shadow-soft p-4 text-center hover:-translate-y-1 transition"><div class="text-3xl"><img src="assets/icons/rent-car.svg" alt="Rent Car" class="w-full h-full object-cover"></div><p class="mt-1 text-sm font-semibold text-sage-900">Rent Car</p></a>

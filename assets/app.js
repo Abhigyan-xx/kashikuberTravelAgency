@@ -5,9 +5,9 @@
 
 const CONFIG = {
   name: 'Shri kashi Kuber Travel Agency',
-  whatsapp: '8887936376',          // <-- country code + number, digits only
-  phoneDisplay: '8887936376',
-  email: 'info@shrikubertravel.example',
+  whatsapp: '6392986404',          // <-- country code + number, digits only
+  phoneDisplay: '6392986404',
+  email: 'kuberkashi2001@gmail.com',
   city: 'Varanasi, Uttar Pradesh',
   address: ' Kuber Complex, Rathyatra Crossing, Jahumandi, Varanasi, Uttar Pradesh 221010',
   hours: 'Open daily, 6:00 AM – 10:00 PM'
@@ -151,25 +151,25 @@ const TITLES = {
   'services': 'Our Services | Shri Kuber Travel Agency',
   'contact': 'Contact Us | Shri Kuber Travel Agency'
 };
-const NAV_ACTIVE = ['bg-sage-600', 'text-white'];
-const NAV_IDLE = ['text-ink', 'hover:bg-sage-100'];
+const NAV_ACTIVE = ['text-terra'];
+const NAV_IDLE = ['text-ink/80', 'hover:text-terra'];
 
 function renderHeader() {
   const el = document.getElementById('site-header');
   if (!el) return;
   const link = (h, t, k, extra = '') =>
-    `<a href="${h}" data-nav="${k}" class="${extra} px-3 py-2 rounded-full text-sm font-medium transition text-ink hover:bg-sage-100">${t}</a>`;
+    `<a href="${h}" data-nav="${k}" class="${extra} px-3 py-2 text-sm font-medium transition text-ink/80 hover:text-terra">${t}</a>`;
   el.innerHTML = `
   <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur border-b border-sand">
     <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
       <a href="#/" class="flex items-center gap-2">
-        <span class="w-9 h-9 rounded-full bg-saffron-400 text-white grid place-items-center font-display font-bold">K</span>
+        <span class="w-9 h-9 rounded-full bg-terra text-white grid place-items-center font-display font-bold">K</span>
         <span class="font-display font-bold text-sage-900 text-lg leading-none">Shri  Kashi Kuber<span class="block text-[10px] tracking-[.25em] font-sans font-medium text-sage-600">TRAVEL AGENCY</span></span>
       </a>
       <nav class="hidden lg:flex items-center gap-1">${NAV.map(n => link(...n)).join('')}</nav>
       <div class="flex items-center gap-2">
         <a href="${waLink('Namaste! I would like to know more about your travel services.')}" target="_blank" rel="noopener"
-           class="hidden sm:inline-flex items-center gap-2 bg-[#25D366] hover:brightness-95 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-soft">Chat on WhatsApp</a>
+           class="hidden sm:inline-flex items-center gap-2 bg-terra hover:bg-terra-dark text-white text-sm font-semibold px-5 py-2.5 transition">Plan on WhatsApp ↗</a>
         <button id="menu-btn" aria-label="Menu" class="lg:hidden w-10 h-10 rounded-full bg-sage-100 text-sage-700 grid place-items-center text-xl">☰</button>
       </div>
     </div>
